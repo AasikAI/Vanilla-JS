@@ -3,6 +3,5 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY server.js ./
-COPY .env.example ./
 EXPOSE 3003
 CMD ["npm","start"]
