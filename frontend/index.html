@@ -1,0 +1,39 @@
+<!DOCTYPE document>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Microservices E-Commerce</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>MicroStore</h1>
+    <div id="auth-section">
+      <input type="text" id="username" placeholder="Username">
+      <input type="password" id="password" placeholder="Password">
+      <button onclick="login()">Login</button>
+      <button onclick="register()">Register</button>
+    </div>
+    <div id="user-info" style="display: none;">
+      <span id="welcome-msg"></span>
+      <button onclick="logout()">Logout</button>
+      <button onclick="viewMyOrders()">My Orders</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="products-section">
+      <h2>Products <button onclick="seedProducts()" class="seed-btn">Seed Demo Products</button></h2>
+      <div id="products-list"></div>
+    </section>
+
+    <section id="orders-section" style="display: none;">
+      <h2>My Orders <button onclick="closeOrders()">Back to Products</button></h2>
+      <div id="orders-list"></div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
